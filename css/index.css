@@ -92,9 +92,35 @@ body {
     z-index: -1;
 }
 
-.hi h1 {
+.hi .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hi .container .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(21), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
     font-size: 46px;
     margin: -20px 0 20px;
+    box-sizing: border-box;
+}
+
+@keyframes typing {
+    from {
+        width: 0%
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
 }
 
 .hi p {
